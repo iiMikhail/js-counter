@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>js-counter</title>
+</head>
+<body>
+
+<script>
+	var counter = 2;
+	var setValue = function() {
+		if(counter > 0) {
+			counter;
+		}
+		else {
+			console.log("Вы ввели неверное значение");
+		}
+	};
+	var increaseCounter = function() {
+		counter++
+	};
+	var decreaseCounter = function() {
+		counter--
+	};
+	var printCounter = function() {
+		console.log(counter);
+	};
+	setValue();
+	increaseCounter();
+	increaseCounter();
+	printCounter();
+</script>
+
+</body>
+</html>
