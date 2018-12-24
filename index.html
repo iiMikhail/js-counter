@@ -7,28 +7,38 @@
 <body>
 
 <script>
-	var counter = 2;
-	var setValue = function() {
-		if(counter > 0) {
-			counter;
+	var counter = (function() {
+		var setValue = function(number) {
+			_counter = number;
+
+			if(_counter > 0) {
+				_counter;
+			}
+			else {
+				console.log("Вы ввели неверное значение");
+			}
+		};
+		var increaseCounter = function() {
+			_counter++
+		};
+		var decreaseCounter = function() {
+			_counter--
+		};
+		var printCounter = function() {
+			console.log(_counter);
+		}; 
+		return {
+			setValue,
+			increaseCounter,
+			decreaseCounter,
+			printCounter
 		}
-		else {
-			console.log("Вы ввели неверное значение");
-		}
-	};
-	var increaseCounter = function() {
-		counter++
-	};
-	var decreaseCounter = function() {
-		counter--
-	};
-	var printCounter = function() {
-		console.log(counter);
-	};
-	setValue();
-	increaseCounter();
-	increaseCounter();
-	printCounter();
+	}())
+		counter.setValue(2);
+		counter.increaseCounter();
+		counter.increaseCounter();
+		counter.printCounter();
+	
 </script>
 
 </body>
